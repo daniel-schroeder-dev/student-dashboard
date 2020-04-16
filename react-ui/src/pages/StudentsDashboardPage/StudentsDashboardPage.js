@@ -18,10 +18,10 @@ function StudentsDashboardPage(props) {
 
   const studentImages = images.map(image => (
     <tr className="students-dashboard-page__student-info-row" onClick={() => handleClick(image.id)} key={image.src}>
-      <td><img className="students-dashboard-page__student-img" src={image.src} alt="student" /></td>
-      <td>{image.name}</td>
-      <td>{randomAttempted()}/16</td>
-      <td>{randomScore()}/100</td>
+      <td className="students-dashboard-page__student-img-wrapper"><img className="students-dashboard-page__student-img" src={image.src} alt="student" /></td>
+      <td><p className="students-dashboard-page__student-name" >{image.name}</p></td>
+      <td><p className="students-dashboard-page__attempted">{randomAttempted()}/16</p></td>
+      <td><p>{randomScore()}/100</p></td>
     </tr>
   ));
 
@@ -30,8 +30,7 @@ function StudentsDashboardPage(props) {
       <table className="students-dashboard-page__student-table">
         <thead>
           <tr>
-            <th></th>
-            <th>Student</th>
+            <th colSpan="2">Student</th>
             <th>Attempted</th>
             <th>Score</th>
           </tr>

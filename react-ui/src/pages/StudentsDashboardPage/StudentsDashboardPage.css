@@ -4,10 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 12px;
 }
 
 .students-dashboard-page__student-table {
   border-spacing: 0;
+  font-size: 14px;
+  padding: 12px;
 }
 
 .students-dashboard-page td {
@@ -18,10 +21,25 @@
   cursor: pointer;
 }
 
+.students-dashboard-page__student-img-wrapper {
+
+}
+
 .students-dashboard-page__student-img {
   border-radius: 50%;
+  width: 50px;
+  margin-right: 18px;  
+}
+
+.students-dashboard-page__student-name {
+  word-wrap: wrap;
+}
+
+.students-dashboard-page__attempted {
+  padding: 12px;
 }
 
 .students-dashboard-page__student-info-row:hover {
   background-color: #ababab;
 }
+
