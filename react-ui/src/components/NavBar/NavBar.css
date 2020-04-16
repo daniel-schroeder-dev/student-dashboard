@@ -1,0 +1,27 @@
+.nav-bar {
+  border-bottom: 1px solid #ababab;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-bar__nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bar__nav-list__list-item {
+  padding: 6px 12px 0 12px;
+}
+
+.nav-bar__nav-list__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  color: #777;
+  border-bottom: 1px solid #ababab;
+}
