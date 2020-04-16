@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node server",
     "build": "cd react-ui/ && npm install && npm run build",
-    "deploy": "git push heroku master && git push origin master"
+    "deploy": "git push heroku master && git push origin master",
+    "populateStudentImages": "node utils/populate-student-images.js"
   },
   "cacheDirectories": [
     "node_modules",
