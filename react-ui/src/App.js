@@ -8,22 +8,12 @@ import StudentsDashboardPage from './pages/StudentsDashboardPage/StudentsDashboa
 function App() {
   return (
     <div className="app">
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/students">Students</NavLink>
-          </li>
-          <li>
-            <NavLink to="/courses">Courses</NavLink>
-          </li>
-        </ul>
-      </nav>
       <Switch>
+        <Route path={`/students/:id/courses`}>
+          Courses Page
+        </Route>
         <Route path="/students">
           <StudentsDashboardPage />
-        </Route>
-        <Route path="/courses">
-          Courses Page
         </Route>
       </Switch>
     </div>
