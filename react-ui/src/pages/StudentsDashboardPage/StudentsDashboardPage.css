@@ -6,6 +6,22 @@
   align-items: center;
 }
 
+.students-dashboard-page__student-table {
+  border-spacing: 0;
+}
+
+.students-dashboard-page td {
+  padding: 0;
+}
+
+.students-dashboard-page__student-info-row {
+  cursor: pointer;
+}
+
 .students-dashboard-page__student-img {
   border-radius: 50%;
+}
+
+.students-dashboard-page__student-info-row:hover {
+  background-color: #ababab;
 }
