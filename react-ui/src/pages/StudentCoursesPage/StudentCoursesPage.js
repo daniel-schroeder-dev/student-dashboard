@@ -1,19 +1,34 @@
 import React from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import './StudentCoursesPage.css';
 
 import students from '../../utils/students';
+import teachers from '../../utils/teachers';
 
 function StudentCoursesPage(props) {
 
-  const match = useRouteMatch();
+  const { id } = useParams();
+  const student = students[+id - 1];
 
-  console.log(match);
+  const courses = teachers.map(teacher => (
+    <div key={teacher.id} className="student-courses-page__course-card">
+      <h2 className="student-courses-page__course-card__course">{teacher.course}</h2>
+      <p className="student-courses-page__course-card__description">{teacher.description}</p>
+      <img className="student-courses-page__course-card__img" src={teacher.src} alt="teacher" />
+      <p className="student-courses-page__course-card__name" >{teacher.name}</p>
+    </div>    
+  ));
 
   return (
     <div className="student-courses-page">
-      StudentCoursesPage
+      <div className="student-courses-page__student-info" >
+        <p className="student-courses-page__student-info__name">{student.name}</p>
+        <img className="student-courses-page__student-info__img" src={student.src} alt="student" />
+      </div>
+      <div className="student-courses-page__courses-wrapper" >
+        {courses}
+      </div>
     </div>
   );
 }
