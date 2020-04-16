@@ -12,7 +12,7 @@ import student10 from '../fixtures/student-images/men-5.jpg';
 
 const faker = require('faker');
 
-const images = [
+const students = [
   { 
     id: 1,
     src: student1, 
@@ -65,4 +65,4 @@ const images = [
   },
 ];
 
-export default images;
+export default students;

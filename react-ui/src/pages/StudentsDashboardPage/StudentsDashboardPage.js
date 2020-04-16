@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import './StudentsDashboardPage.css';
 
-import images from '../../utils/images';
+import students from '../../utils/students';
 
 function StudentsDashboardPage(props) {
 
@@ -16,10 +16,10 @@ function StudentsDashboardPage(props) {
     history.push(`/students/${id}/courses`);
   };
 
-  const studentImages = images.map(image => (
-    <tr className="students-dashboard-page__student-info-row" onClick={() => handleClick(image.id)} key={image.src}>
-      <td className="students-dashboard-page__student-img-wrapper"><img className="students-dashboard-page__student-img" src={image.src} alt="student" /></td>
-      <td><p className="students-dashboard-page__student-name" >{image.name}</p></td>
+  const studentsInfo = students.map(student => (
+    <tr className="students-dashboard-page__student-info-row" onClick={() => handleClick(student.id)} key={student.src}>
+      <td className="students-dashboard-page__student-img-wrapper"><img className="students-dashboard-page__student-img" src={student.src} alt="student" /></td>
+      <td><p className="students-dashboard-page__student-name" >{student.name}</p></td>
       <td><p className="students-dashboard-page__attempted">{randomAttempted()}/16</p></td>
       <td><p>{randomScore()}/100</p></td>
     </tr>
@@ -36,7 +36,7 @@ function StudentsDashboardPage(props) {
           </tr>
         </thead>
         <tbody>
-          {studentImages}
+          {studentsInfo}
         </tbody>
       </table>
     </div>
