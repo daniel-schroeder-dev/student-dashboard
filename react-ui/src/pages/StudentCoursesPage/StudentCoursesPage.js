@@ -13,10 +13,14 @@ function StudentCoursesPage(props) {
 
   const courses = teachers.map(teacher => (
     <div key={teacher.id} className="student-courses-page__course-card">
-      <h2 className="student-courses-page__course-card__course">{teacher.course}</h2>
-      <p className="student-courses-page__course-card__description">{teacher.description}</p>
-      <img className="student-courses-page__course-card__img" src={teacher.src} alt="teacher" />
-      <p className="student-courses-page__course-card__name" >{teacher.name}</p>
+      <div>
+          <h2 className="student-courses-page__course-card__course">{teacher.course}</h2>
+          <p className="student-courses-page__course-card__description">{teacher.description}</p>
+      </div>
+      <div className="student-courses-page__course-card__instructor-info-wrapper" >
+        <img className="student-courses-page__course-card__img" src={teacher.src} alt="teacher" />
+        <p className="student-courses-page__course-card__name" >{teacher.name}</p>
+      </div>
     </div>    
   ));
 

@@ -1,5 +1,4 @@
 .student-courses-page {
-  /*border: 1px solid blue;*/
   padding: 12px;
 }
 
@@ -23,14 +22,13 @@
 
 .student-courses-page__courses-wrapper {
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: 325px;
 }
 
 .student-courses-page__course-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
   margin: 12px;
   padding: 12px;
   border-radius: 10px;
@@ -48,23 +46,33 @@
 .student-courses-page__course-card:nth-child(3) {
   background-color: #bf4e4e;
 }
+
 .student-courses-page__course-card:nth-child(4) {
   background-color: #58b895;
 }
+
 .student-courses-page__course-card:nth-child(5) {
   background-color: #ffab3d;
 }
+
 .student-courses-page__course-card:nth-child(6) {
   background-color: #9db858;
 }
 
 .student-courses-page__course-card__course {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .student-courses-page__course-card__description {
   text-align: center;
   margin-top: 12px;
+}
+
+.student-courses-page__course-card__instructor-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .student-courses-page__course-card__img {
@@ -73,6 +81,41 @@
   margin-top: 6px;
 }
 
-.student-courses-page__course-card__name {
+@media all and (min-width: 650px) {
+  
+  .student-courses-page__courses-wrapper {
+    grid-template-columns: 50% 50%;
+  }
 
+  .student-courses-page__course-card {
+    justify-content: space-between;
+    margin: 12px 24px;
+    max-width: 325px;
+  }
+
+  .student-courses-page__student-info {
+    justify-content: flex-end;
+    margin-right: 12px;
+  }
+
+  .student-courses-page__student-info__img {
+    width: 80px;
+  }
+
+  .student-courses-page__course-card__img {
+    width: 80px;
+  }
+
+}
+
+@media all and (min-width: 1050px) {
+  .student-courses-page__courses-wrapper {
+    grid-template-columns: 350px 350px 350px;
+  }
+
+  .student-courses-page__course-card {
+    justify-content: space-between;
+    margin: 12px;
+    max-width: 350px;
+  }
 }
