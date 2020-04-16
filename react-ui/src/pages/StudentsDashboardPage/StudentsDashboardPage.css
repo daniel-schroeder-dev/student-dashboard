@@ -76,7 +76,7 @@
 
   .students-dashboard-page__student-table {
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
   }
 
   .students-dashboard-page__student-img {
@@ -99,8 +99,24 @@
     margin-right: 0;
   }
 
+  .students-dashboard-page__student-img-wrapper {
+    text-align: center;
+  }
+
   .students-dashboard-page__attempted {
     padding: 0;
   }
+
+}
+
+@media all and (min-width: 650px) {
+
+  .students-dashboard-page td {
+    padding: 12px;
+  }
+  
+  .students-dashboard-page__student-img {
+    width: 80px;
+  }  
 
 }
