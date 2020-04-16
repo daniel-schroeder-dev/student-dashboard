@@ -5,3 +5,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.students-dashboard-page__student-img {
+  border-radius: 50%;
+}

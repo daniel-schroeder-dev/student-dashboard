@@ -6,9 +6,9 @@ import images from '../../utils/images';
 function StudentsDashboardPage(props) {
 
   const studentImages = images.map(image => (
-    <tr key={image}>
-      <td className="students-dashboard-page__student-img"><img src={image} alt="student" /></td>
-      <td>Student Name</td>
+    <tr key={image.src}>
+      <td><img className="students-dashboard-page__student-img" src={image.src} alt="student" /></td>
+      <td>{image.name}</td>
       <td>12/16</td>
       <td>68/100</td>
     </tr>
